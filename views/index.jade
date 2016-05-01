@@ -1,12 +1,12 @@
-//- views/index.jade
-html
-        head
-                title
-        body
-                form(method="post",enctype="multipart/form-data",action="/")
-                        p
-                                input(type="text",name="title",placeholder="Title of File")
-                        p
-                                input(type="file",name="imgFile")
-                        p
-                                input(type="submit")
+html(lang='en')
+  head
+    title Deeplearning Facerecog  
+    link(rel='stylesheet', type='text/css', href='./public/theme.css')
+    script(src='https://code.jquery.com/jquery-latest.min.js', type='text/javascript')
+  body
+    .image-upload
+      label(for='file-input')
+        img(src='https://d30y9cdsu7xlg0.cloudfront.net/png/49665-200.png')
+      form#form(method='post', enctype='multipart/form-data', action='/')
+        p
+          input#file-input(type='file', name='imgFile' onchange='this.form.submit();')
